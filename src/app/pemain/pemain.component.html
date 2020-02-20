@@ -1,0 +1,25 @@
+<h1>Data Pemain</h1>
+<div class="container" style="margin-top: 30px;">
+  <div class="table-responsive">
+  <table class="table table-hover">
+    <thead>
+     <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Address</th>
+        <th>Company</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of httpdata">
+        <td> {{ data.id }}</td>
+        <td> {{ data.name }}</td>
+        <td> {{ data.email }}</td>
+        <td> {{ data.address.city }}</td>
+        <td> {{ data.company.name }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</div>
