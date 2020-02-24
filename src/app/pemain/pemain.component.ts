@@ -1,22 +1,19 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { HttpClient } from '@angular/common/http';
+import { Pemain } from '../pemain.model';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-pemain',
   templateUrl: './pemain.component.html',
   styleUrls: ['./pemain.component.css']
 })
-export class PemainComponent {
-  title = 'belajar-angular';
+export class PemainComponent implements OnInit {
+  pemain$: Pemain [];
 
   //inject HttpClient into your component or service.
-  constructor (private http: HttpClient, private router: Router) {}
-  httpdata;
-  ngOnInit(): void {this.http.get("http://jsonplaceholder.typicode.com/users").
-      subscribe(
-         (data) => {this.displaydata(data);}
-      )
-  	}
-  	displaydata(data) {this.httpdata = data;} 
+  constructor (private dataService: DataService) {}
+  ngOnInit() {
+    return this.dataService.getCustomer()
+    .subscribe(data => this.pemain$ = data)
+  }
 }

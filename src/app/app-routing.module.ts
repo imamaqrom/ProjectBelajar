@@ -5,6 +5,9 @@ import { KaryawanComponent } from './karyawan/karyawan.component';
 import { PostsComponent } from './posts/posts.component';
 import { KaryawanCreateComponent } from './karyawan-create/karyawan-create.component';
 import { LoginComponent } from './login/login.component';
+import { CustomersListComponent } from './customers-list/customers-list.component';
+import { PeopleListComponent } from './people-list/people-list.component';
+
 
 const routes: Routes = [ 
 	{path: '', component: LoginComponent},
@@ -12,7 +15,9 @@ const routes: Routes = [
 	{path: 'karyawan', component: KaryawanComponent},
 	{path: 'posts', component: PostsComponent},
 	{path: 'karyawan-create', component: KaryawanCreateComponent},
-	{path: 'login', component: LoginComponent}
+	{path: 'login', component: LoginComponent},
+	{path: 'customers-list', component: CustomersListComponent},
+	{path: 'people-list', component: PeopleListComponent},
 	];
 
 @NgModule({
@@ -28,4 +33,6 @@ export const RoutedComponents = [
 	PostsComponent,
 	KaryawanCreateComponent,
 	LoginComponent,
+	CustomersListComponent,
+	PeopleListComponent,
 ]

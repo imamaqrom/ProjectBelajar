@@ -12,12 +12,12 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let data of httpdata">
-        <td> {{ data.id }}</td>
-        <td> {{ data.name }}</td>
-        <td> {{ data.email }}</td>
-        <td> {{ data.address.city }}</td>
-        <td> {{ data.company.name }}</td>
+      <tr *ngFor="let pemain of pemain$">
+        <td> {{ pemain.id }}</td>
+        <td> {{ pemain.name }}</td>
+        <td> {{ pemain.email }}</td>
+        <td> {{ pemain.address.city }}</td>
+        <td> {{ pemain.company.name }}</td>
       </tr>
     </tbody>
   </table>

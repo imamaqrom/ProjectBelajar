@@ -13,6 +13,9 @@ import { FormsModule } from '@angular/forms';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { LoginComponent } from './login/login.component';
+import { CustomersListComponent } from './customers-list/customers-list.component';
+import { DataService } from './data.service';
+import { PeopleListComponent } from './people-list/people-list.component'
 
 @NgModule({
   declarations: [
@@ -24,7 +27,9 @@ import { LoginComponent } from './login/login.component';
     KaryawanCreateComponent,
     HeaderComponent,
     FooterComponent,
-    LoginComponent
+    LoginComponent,
+    CustomersListComponent,
+    PeopleListComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +37,7 @@ import { LoginComponent } from './login/login.component';
     HttpClientModule,
     FormsModule,
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
